@@ -1,3 +1,4 @@
+import netlify from "@netlify/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { devtools } from "@tanstack/devtools-vite";
 
@@ -15,6 +16,7 @@ const config = defineConfig({
 		tailwindcss(),
 		tanstackStart(),
 		viteReact(),
+		netlify(),
 	],
 	server: {
 		port: 3000,
