@@ -2,7 +2,42 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../locales";
 
-export const Route = createFileRoute("/")({ component: App });
+export const Route = createFileRoute("/")({
+	head: () => ({
+		meta: [
+			{ title: "Gabriel Ferreira - Portfólio" },
+			{
+				name: "description",
+				content:
+					"Desenvolvedor frontend especializado em React e Next.js, com foco em performance e experiência do usuário.",
+			},
+			{ property: "og:title", content: "Gabriel Ferreira - Portfólio" },
+			{ property: "og:image", content: "/og.webp" },
+			{
+				property: "og:description",
+				content: "Portfólio de Gabriel Ferreira, desenvolvedor full stack.",
+			},
+		],
+		links: [{ rel: "canonical", href: "https://ferreira710.dev/" }],
+		script: [
+			{
+				type: "application/ld+json",
+				innerHTML: JSON.stringify({
+					"@context": "https://schema.org",
+					"@type": "Person",
+					name: "Gabriel Ferreira",
+					jobTitle: "Frontend Engineer",
+					url: "https://ferreira710.dev",
+					sameAs: [
+						"https://linkedin.com/in/yferreirinha",
+						"https://github.com/ferreira710",
+					],
+				}),
+			},
+		],
+	}),
+	component: App,
+});
 
 function App() {
 	const { language } = useLanguage();
@@ -86,6 +121,8 @@ function App() {
 								src="/gabriel.jpg"
 								alt="Gabriel Ferreira"
 								className="h-full w-full rounded-full object-cover"
+								loading="eager"
+								fetchPriority="high"
 							/>
 						</div>
 					</div>

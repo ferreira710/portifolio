@@ -3,6 +3,23 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../locales";
 
 export const Route = createFileRoute("/projects")({
+	head: () => ({
+		meta: [
+			{ title: "Projetos - Gabriel Ferreira" },
+			{
+				name: "description",
+				content:
+					"Cases de impacto e projetos desenvolvidos por Gabriel Ferreira, com foco em performance e experiência do usuário.",
+			},
+			{ property: "og:title", content: "Projetos - Gabriel Ferreira" },
+			{ property: "og:image", content: "/og.webp" },
+			{
+				property: "og:description",
+				content: "Conheça os principais projetos de Gabriel Ferreira.",
+			},
+		],
+		links: [{ rel: "canonical", href: "https://ferreira710.dev/projects" }],
+	}),
 	component: RouteComponent,
 });
 

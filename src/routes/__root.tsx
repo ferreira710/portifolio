@@ -9,23 +9,10 @@ import appCss from "../styles.css?url";
 export const Route = createRootRoute({
 	head: () => ({
 		meta: [
-			{
-				charSet: "utf-8",
-			},
-			{
-				name: "viewport",
-				content: "width=device-width, initial-scale=1",
-			},
-			{
-				title: "Portifólio - Gabriel Ferreira",
-			},
+			{ charSet: "utf-8" },
+			{ name: "viewport", content: "width=device-width, initial-scale=1" },
 		],
-		links: [
-			{
-				rel: "stylesheet",
-				href: appCss,
-			},
-		],
+		links: [{ rel: "stylesheet", href: appCss }],
 	}),
 	shellComponent: RootDocument,
 });
@@ -33,25 +20,32 @@ export const Route = createRootRoute({
 function RootDocument({ children }: { children: React.ReactNode }) {
 	return (
 		<LanguageProvider>
-			<html lang="en" suppressHydrationWarning>
+			<html lang={"pt-BR"} suppressHydrationWarning>
 				<head>
 					<HeadContent />
+					<link
+						rel="preload"
+						as="image"
+						href="/gabriel.jpg"
+						fetchPriority="high"
+					/>
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
 				</head>
 				<body className="font-sans antialiased wrap-anywhere selection:bg-[rgba(79,184,178,0.24)]">
 					<Header />
 					{children}
 					<Footer />
-					<TanStackDevtools
-						config={{
-							position: "bottom-right",
-						}}
-						plugins={[
-							{
-								name: "Tanstack Router",
-								render: <TanStackRouterDevtoolsPanel />,
-							},
-						]}
-					/>
+					{import.meta.env.DEV && (
+						<TanStackDevtools
+							config={{ position: "bottom-right" }}
+							plugins={[
+								{
+									name: "Tanstack Router",
+									render: <TanStackRouterDevtoolsPanel />,
+								},
+							]}
+						/>
+					)}
 					<Scripts />
 				</body>
 			</html>
