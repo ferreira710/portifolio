@@ -26,7 +26,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 					<link
 						rel="preload"
 						as="image"
-						href="/gabriel.jpg"
+						href="/gabriel.webp"
 						fetchPriority="high"
 					/>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />

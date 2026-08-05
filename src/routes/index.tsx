@@ -118,7 +118,7 @@ function App() {
 					<div className="flex justify-center">
 						<div className="flex h-52 w-52 items-center justify-center rounded-full bg-linear-to-br from-(--lagoon-deep) to-emerald-400 text-6xl text-white shadow-xl sm:h-64 sm:w-64">
 							<img
-								src="/gabriel.jpg"
+								src="/gabriel.webp"
 								alt="Gabriel Ferreira"
 								className="h-full w-full rounded-full object-cover"
 								loading="eager"
