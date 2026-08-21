@@ -58,6 +58,16 @@ export const pt = {
 				description:
 					"Plataforma de serviços para a cidade de Limeira, com foco em acessibilidade e usabilidade, além de um Dashboard administrativo.",
 			},
+			{
+				title: "Portfolio - Gabriel Ferreira",
+				description:
+					"Portfólio pessoal apresentando meus trabalhos e habilidades como Frontend Engineer, construído com React e Next.js.",
+			},
+			{
+				title: "Games Backlog",
+				description:
+					"Aplicação para gerenciar jogos que desejo jogar, com foco em organização e fácil acesso.",
+			},
 		],
 	},
 };
@@ -119,6 +129,16 @@ export const en: typeof pt = {
 				title: "Limeira ON",
 				description:
 					"Service platform for the city of Limeira, focusing on accessibility and usability, plus an administrative dashboard.",
+			},
+			{
+				title: "Portfolio - Gabriel Ferreira",
+				description:
+					"Personal portfolio showcasing my work and skills as a Frontend Engineer, built with React and Next.js.",
+			},
+			{
+				title: "Games Backlog",
+				description:
+					"Application to manage games I want to play, focusing on organization and easy access.",
 			},
 		],
 	},
