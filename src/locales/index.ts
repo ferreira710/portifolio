@@ -61,7 +61,7 @@ export const pt = {
 			{
 				title: "Portfolio - Gabriel Ferreira",
 				description:
-					"Portfólio pessoal apresentando meus trabalhos e habilidades como Frontend Engineer, construído com React e Next.js.",
+					"Portfólio pessoal apresentando meus trabalhos e habilidades como Frontend Engineer, construído com React e Vite.",
 			},
 			{
 				title: "Games Backlog",
@@ -133,7 +133,7 @@ export const en: typeof pt = {
 			{
 				title: "Portfolio - Gabriel Ferreira",
 				description:
-					"Personal portfolio showcasing my work and skills as a Frontend Engineer, built with React and Next.js.",
+					"Personal portfolio showcasing my work and skills as a Frontend Engineer, built with React and Vite.",
 			},
 			{
 				title: "Games Backlog",
