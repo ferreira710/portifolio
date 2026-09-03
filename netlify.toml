@@ -19,3 +19,16 @@
   #  publish = "dist" # Folder with the static content for _redirect file
 
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
+
+# Headers para o que o Netlify serve do próprio storage (assets, imagens, PDFs).
+# O HTML da página é SSR (função) e NÃO recebe estes headers — esses ficam em
+# src/start.ts. Nada de default-src aqui: se algum dia o build emitir HTML
+# estático, uma CSP restritiva colocada às cegas quebraria a página.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "frame-ancestors 'none'"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
