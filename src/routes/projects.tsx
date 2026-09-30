@@ -54,8 +54,11 @@ function RouteComponent() {
 				</h2>
 				<div className="grid gap-4 sm:grid-cols-2">
 					{t.featured.map((project, index) => (
-						<div
+						<a
 							key={project.title}
+							href={project.url}
+							target="_blank"
+							rel="noopener noreferrer"
 							className="island-shell rise-in group relative rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg"
 							style={{ animationDelay: `${index * 100 + 80}ms` }}
 						>
@@ -68,7 +71,7 @@ function RouteComponent() {
 							<p className="m-0 text-sm leading-relaxed text-(--sea-ink-soft)">
 								{project.description}
 							</p>
-						</div>
+						</a>
 					))}
 				</div>
 			</section>

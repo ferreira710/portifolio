@@ -34,16 +34,18 @@ export const pt = {
 		featuredTitle: "⭐ Principais entregas",
 		featured: [
 			{
-				title: "Otimização do Checkout - KaBuM!",
+				title: "Resenha Call",
 				description:
-					"Reconstrução do fluxo de checkout para reduzir abandono de carrinho. Implementação de nova interface com gerenciamento de estado global e testes para garantir zero regressões em uma área crítica.",
-				metric: "-15% abandono",
+					"Aplicativo de chamadas em grupo em tempo real usando WebRTC, com comunicação peer-to-peer de áudio e vídeo direto no navegador.",
+				metric: "WebRTC",
+				url: "https://resenhacall.netlify.app/",
 			},
 			{
-				title: "Refatoração de Componentes - KaBuM!",
+				title: "Sec Headers",
 				description:
-					"Migração de componentes legados para Next.js (SSR/ISR) e TypeScript, com foco em lazy loading e otimização de imagens, resultando em melhorias drásticas de SEO e experiência.",
-				metric: "+30% performance (LCP)",
+					"Scanner de vulnerabilidades de headers HTTP: analisa os headers de segurança de um site e aponta configurações ausentes ou inseguras.",
+				metric: "Segurança",
+				url: "https://sec-headers.netlify.app/",
 			},
 		],
 		otherTitle: "📁 Outros projetos",
@@ -106,16 +108,18 @@ export const en: typeof pt = {
 		featuredTitle: "⭐ Featured deliveries",
 		featured: [
 			{
-				title: "Checkout Optimization - KaBuM!",
+				title: "Resenha Call",
 				description:
-					"Rebuilt the checkout flow to reduce cart abandonment. Implemented a new interface with global state management and tests to ensure zero regressions in a critical area.",
-				metric: "-15% abandonment",
+					"Real-time group calling app built with WebRTC, with peer-to-peer audio and video straight in the browser.",
+				metric: "WebRTC",
+				url: "https://resenhacall.netlify.app/",
 			},
 			{
-				title: "Legacy Component Refactoring - KaBuM!",
+				title: "Sec Headers",
 				description:
-					"Migrated legacy components to Next.js (SSR/ISR) and TypeScript, focusing on lazy loading and image optimization, resulting in drastic improvements in SEO and user experience.",
-				metric: "+30% performance (LCP)",
+					"HTTP header vulnerability scanner: analyzes a website's security headers and flags missing or insecure configurations.",
+				metric: "Security",
+				url: "https://sec-headers.netlify.app/",
 			},
 		],
 		otherTitle: "📁 Other projects",
